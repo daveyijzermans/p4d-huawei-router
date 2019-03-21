@@ -1,14 +1,18 @@
 {
   "name": "p4d-huawei-router",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Module for communicating with the Huawei Mobile Router API (model E5377Bs-508).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daveyijzermans/p4d-huawei-router.git"
+  },
   "author": "Javoscript <javi@p4d.com.ar>",
-  "license": "GPL",
+  "license": "LGPL-3.0-or-later",
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.18.0"
   }
 }

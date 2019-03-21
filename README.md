@@ -1,6 +1,6 @@
 # Router
 
-NodeJS connector to Huawei Mobile Router (E5377Bs-508) API
+NodeJS connector to Huawei Mobile Router (E5377Bs-508) API. Mofified from npm package version found at (https://www.npmjs.com/package/@p4d/huawei-router)[npm].
 
 ## Features
 
@@ -11,7 +11,7 @@ NodeJS connector to Huawei Mobile Router (E5377Bs-508) API
 Using npm:
 
 ```bash
-$ npm install @p4d/huawei-router
+$ npm install github:daveyijzermans/p4d-huawei-router
 ```
 
 
@@ -22,7 +22,8 @@ Included `example.js` file with usage demo.
 * Require the object
 
 ```js
-var router = require('@p4d/huawei-router')
+var Router = require('p4d-huawei-router')
+var router = new Router()
 ```
 
 * Set the `username`, `password` and `host` (`admin`/`admin` / `192.168.8.1` by default)
@@ -31,6 +32,7 @@ var router = require('@p4d/huawei-router')
 router.setUsername('adminUser')
 router.setPassword('adminPassword')
 router.setHost('192.168.9.1')
+router.setTimeout(3000)
 ```
 
 * All data extraction methods are based on `Promise`s:
@@ -71,3 +73,5 @@ router.getNotifications().then((data) => {
 	console.log(data)
 })
 ```
+
+Remember to catch rejections as you wish! This version was adapted to also fire rejections after a set timeout.

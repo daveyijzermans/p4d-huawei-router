@@ -6,6 +6,7 @@ try {
   throw new Error('Crypto support is disabled!')
 }
 var axios = require('axios')
+var defaults = require('./defaults')
 
 /**
  * Create a new instance of Router
@@ -13,10 +14,11 @@ var axios = require('axios')
  * @param {Object} instanceConfig The default config for the instance
 */
 function Router(instanceConfig) {
-	this.host = instanceConfig.host
-	this.username = instanceConfig.username
-	this.password = instanceConfig.password
-	this.timeout = parseInt(instanceConfig.timeout) || 5000
+	var c = Object.assign(defaults, instanceConfig);
+	this.host = c.host
+	this.username = c.username
+	this.password = c.password
+	this.timeout = parseInt(c.timeout) || 5000
 
 	this.sesInfo = ''
 	this.tokInfo = ''
@@ -30,6 +32,9 @@ function Router(instanceConfig) {
 	}
 	this.setPassword = function (password) {
 		this.password = password
+	}
+	this.setTimeout = function (timeout) {
+		this.timeout = timeout
 	}
 
 	this.isSessionOpen = function () {

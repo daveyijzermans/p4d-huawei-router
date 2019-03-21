@@ -1,4 +1,5 @@
-var router = require('p4d-huawei-api')(); // initialize with defaults
+var Router = require('./core/Router');
+var router = new Router(); // initialize with defaults
 
 router.setUsername('admin')
 router.setPassword('admin_2017_p4d')
