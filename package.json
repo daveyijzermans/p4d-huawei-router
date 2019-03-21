@@ -1,5 +1,5 @@
 {
-  "name": "@p4d/huawei-router",
+  "name": "p4d-huawei-router",
   "version": "2.0.0",
   "description": "Module for communicating with the Huawei Mobile Router API (model E5377Bs-508).",
   "main": "index.js",
