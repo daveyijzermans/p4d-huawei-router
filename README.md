@@ -1,6 +1,6 @@
 # Router
 
-NodeJS connector to Huawei Mobile Router (E5377Bs-508) API. Mofified from npm package version found at (https://www.npmjs.com/package/@p4d/huawei-router)[npm].
+NodeJS connector to Huawei Mobile Router (E5377Bs-508) API. Mofified from npm package version found at https://www.npmjs.com/package/@p4d/huawei-router.
 
 ## Features
 
